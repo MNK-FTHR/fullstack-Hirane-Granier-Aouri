@@ -1,8 +1,6 @@
 import React from 'react';
 
-const FooterComponent:
-
-    React.FC = () => {
+const FooterComponent = () => {
     return (
         <footer >
             <p>La terre appelle SeaMonkey </p>

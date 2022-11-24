@@ -1,10 +1,9 @@
-import type { NextPage } from "next";
 import { InputTextComponent } from "my-lib-ui";
 
 import FooterComponent from "../components/Footer";
 import HeadComponent from "../components/Navbar";
 
-const Home: NextPage = () => {
+const Home = () => {
     return (
         <div>
             <HeadComponent />
