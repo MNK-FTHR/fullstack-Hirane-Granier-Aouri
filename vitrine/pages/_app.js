@@ -1,7 +1,10 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import "my-lib-ui/dist/index.css";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import  { AppProps } from "next/app";
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
