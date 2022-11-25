@@ -1,4 +1,4 @@
-import { InputTextComponent } from "my-lib-ui";
+import {InputTextComponent} from "my-lib-ui";
 
 import FooterComponent from "../components/Footer";
 import HeadComponent from "../components/Navbar";
@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <HeadComponent />
-            <InputTextComponent label="Email" placeholder="email" />
+            <InputTextComponent />
             <main></main>
             <FooterComponent />
         </div>

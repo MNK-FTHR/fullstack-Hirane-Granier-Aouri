@@ -1,7 +1,9 @@
 import React from "react";
 
-const RadioButtonComponent = (props) => {
-  return <div></div>;
+const RadioButtonComponent = () => {
+  return (
+    <div></div>
+  );
 };
 
 export default RadioButtonComponent;

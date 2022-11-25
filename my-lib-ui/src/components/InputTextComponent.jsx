@@ -1,13 +1,9 @@
 import React from "react";
 
-const InputComponent = (props) => {
-  const { label } = props;
+const InputTextComponent = () => {
   return (
-    <div className="my-lib-ui-form-field">
-      <label className="my-lib-ui-label">{label}</label>
-      <input {...props} className="my-lib-ui-input" />
-    </div>
+    <input type={"text"}/>
   );
 };
 
-export default InputComponent;
+export default InputTextComponent;

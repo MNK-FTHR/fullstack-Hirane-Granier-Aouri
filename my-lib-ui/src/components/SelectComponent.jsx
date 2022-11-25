@@ -1,12 +1,8 @@
 import React from "react";
 
-const SelectComponent = (props) => {
+const SelectComponent = () => {
   return (
-    <div className="my-lib-ui-form-field">
-      <select className="my-lib-ui-select" {...props}>
-        {props.children}
-      </select>
-    </div>
+    <div></div>
   );
 };
 
