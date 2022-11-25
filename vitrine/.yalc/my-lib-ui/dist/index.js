@@ -9,10 +9,10 @@ var InputTextComponent = function InputTextComponent() {
   });
 };
 
-var ButtonComponent = function ButtonComponent() {
+var ButtonComponent = function ButtonComponent(props) {
   return /*#__PURE__*/React.createElement("button", {
     className: ""
-  });
+  }, props.text);
 };
 
 exports.ButtonComponent = ButtonComponent;

@@ -8,7 +8,7 @@ const Home = () => {
         <div>
             <HeadComponent />
             <InputTextComponent />
-            <ButtonComponent text="button" />
+            <ButtonComponent text="HAHA" />
             <main></main>
             <FooterComponent />
         </div>
