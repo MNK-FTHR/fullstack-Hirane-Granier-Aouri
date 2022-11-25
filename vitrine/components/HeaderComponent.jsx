@@ -4,7 +4,7 @@ import React from "react"
 const HeadComponent = () => {
     return (
         <Head>
-            <title>Chemin</title>
+            <title>Ride</title>
             <meta name="description" content="" />
         </Head>
     );

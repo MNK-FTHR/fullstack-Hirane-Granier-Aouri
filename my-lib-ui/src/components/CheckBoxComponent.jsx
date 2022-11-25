@@ -1,9 +1,9 @@
 import React from "react";
 
-const CheckboxComponent = () => {
+const CheckBoxComponent = () => {
   return (
-    <div></div>
+    <div>checkbox</div>
   );
 };
 
-export default CheckboxComponent;
+export default CheckBoxComponent;

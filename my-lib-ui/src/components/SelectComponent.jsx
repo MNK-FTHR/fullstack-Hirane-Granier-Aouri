@@ -2,7 +2,7 @@ import React from "react";
 
 const SelectComponent = () => {
   return (
-    <div></div>
+    <div>select</div>
   );
 };
 

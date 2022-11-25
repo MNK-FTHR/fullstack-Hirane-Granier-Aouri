@@ -1,7 +1,7 @@
-import {InputTextComponent, ButtonComponent} from "my-lib-ui";
+import {InputTextComponent, ButtonComponent, RadioButtonComponent, SelectComponent, CheckBoxComponent} from "my-lib-ui";
 
-import FooterComponent from "../components/Footer";
-import HeadComponent from "../components/Navbar";
+import FooterComponent from "../components/FooterComponent";
+import HeadComponent from "../components/HeaderComponent";
 
 const Home = () => {
     return (
@@ -9,6 +9,9 @@ const Home = () => {
             <HeadComponent />
             <InputTextComponent />
             <ButtonComponent text="HAHA" />
+            <RadioButtonComponent />
+            <SelectComponent />
+            <CheckBoxComponent />
             <main></main>
             <FooterComponent />
         </div>
