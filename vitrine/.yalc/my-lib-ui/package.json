@@ -22,7 +22,7 @@
     "predeploy": "cd example && npm install && npm run build",
     "deploy": "gh-pages -d example/build",
     "yalc:build": "npm run sass:build && npm run build &&  yalc publish --private",
-    "sass:build": "sass src/index.css dist/index.css",
+    "sass:build": "sass src/index.scss dist/index.css",
     "sass:watch": "sass -w src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -36,5 +36,5 @@
   "dependencies": {
     "sass": "^1.56.1"
   },
-  "yalcSig": "7b148ba801a06a70ff473e8c443ceb97"
+  "yalcSig": "2c9f8925505656bd38a26d9fdecdd18e"
 }
