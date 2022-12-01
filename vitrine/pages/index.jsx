@@ -3,17 +3,13 @@ import {InputTextComponent, RadioButtonComponent, SelectComponent, CheckBoxCompo
 import FooterComponent from "../components/Footer/FooterComponent";
 import HeadComponent from "../components/HeaderComponent";
 import TopNavComponent from "../components/TopNav/TopNavComponent"
+import MainComponent from "../components/Main/MainComponent"
 const Home = () => {
     return (
         <div>
             <HeadComponent />
             <TopNavComponent />
-            {/* <ButtonComponent text="HAHA" /> */}
-            <InputTextComponent />
-            <RadioButtonComponent />
-            <SelectComponent />
-            <CheckBoxComponent />
-            <main></main>
+            <MainComponent />
             <FooterComponent />
         </div>
     );

@@ -1,6 +1,5 @@
 const style = {
     btn: {
-        padding: "15px 32px",
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
@@ -10,8 +9,6 @@ const style = {
         position: "absolute",
         width: "150px",
         right: "9px",
-        // top: "16.67%",
-        // bottom: "22.22%",
     },
     danger: {
         background: "#C00000",
