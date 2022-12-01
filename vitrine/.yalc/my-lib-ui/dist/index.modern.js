@@ -22,15 +22,18 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-var _btn;
 var style = {
-  btn: (_btn = {
-    padding: "15px 32px",
+  btn: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center"
-  }, _btn["padding"] = "12px 16px", _btn.gap = "8px", _btn.position = "absolute", _btn.width = "150px", _btn.right = "9px", _btn),
+    alignItems: "center",
+    padding: "12px 16px",
+    gap: "8px",
+    position: "absolute",
+    width: "150px",
+    right: "9px"
+  },
   danger: {
     background: "#C00000",
     color: "white"

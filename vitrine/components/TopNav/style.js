@@ -1,5 +1,7 @@
 const style = {
     container: {
+        backgroundColor: "white",
+        color: "black",
         display: "grid",
         gridTemplateColumns: "66px 1fr 1fr",
         gridTemplateRows: "66px",

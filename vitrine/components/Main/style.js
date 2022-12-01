@@ -24,16 +24,19 @@ const style = {
         gridArea: "bgcar"
     },
       
-    desc: { gridArea: "desc", backgroundColor: "white" },
+    desc: { gridArea: "desc", backgroundColor: "white", color: "black" },
 
     description: { 
         fontSize: "18px",
-        padding: "20px"
+        padding: "25px"
     },
     
     main: {  
+        paddingLeft: "50px",
+        backgroundColor: "white",
+        color: "black",
         display: "grid",
-        gridTemplateColumns: "1fr 1fr 1fr",
+        gridTemplateColumns: "1fr 2fr 1fr",
         gridTemplateRows: "1fr",
         gap: "0px 0px",
         gridAutoFlow: "row",

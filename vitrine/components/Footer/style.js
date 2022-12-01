@@ -9,7 +9,7 @@ const style = {
         gridTemplateAreas:`
             "firstLink . ."
             "secondLink . ."
-            ". main .";`
+            ". main ."`
     },
     gridObjects:{
         firstLink: { gridArea: "firstLink", marginTop: "15px" },

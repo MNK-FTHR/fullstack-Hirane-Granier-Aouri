@@ -6,7 +6,6 @@ const style = {
         alignItems: "center",
         padding: "12px 16px",
         gap: "8px",
-        position: "absolute",
         width: "150px",
         right: "9px",
     },
