@@ -17,8 +17,8 @@ const style = {
         gridTemplateColumns: "1fr 1fr",
         gridTemplateRows: "1fr",
         gap: "0px 0px",
-        gridTemplateAreas: 
-        "company private",
+        gridTemplateAreas: `
+        "company private"`,
         gridArea: "radioArea"
     },
     company: { gridArea: "company" },

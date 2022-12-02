@@ -19,7 +19,7 @@ const MainComponent = () => {
             <div style={style.main}>
                 <div style={style.mainForm}>
                     <h2 style={{color: "#C00000", fontWeight: "500"}}>INSCRIPTION</h2>
-                    <p>Je suis:</p>
+                    <p>Je suis :</p>
                     <FormComponent />
                 </div>
             </div>

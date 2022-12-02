@@ -2,10 +2,44 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = _interopDefault(require('react'));
 
+var colors = {
+  medium: "rgba(19, 19, 21, 0.6)"
+};
+var style = {
+  wrapper: {
+    marginBottom: "1.5rem",
+    position: "relative",
+    width: "20.4375rem"
+  },
+  textInput: {
+    border: "none",
+    borderBottom: "0.125rem solid " + colors.medium,
+    width: "100%",
+    height: "2rem",
+    fontSize: "1.0625rem",
+    paddingLeft: "0.875rem",
+    lineHeight: "147.6%",
+    paddingTop: "0.825rem",
+    paddingBottom: "0.5rem"
+  },
+  subText: {
+    position: "absolute",
+    top: "0.9375rem",
+    left: "0.875rem",
+    lineHeight: "147.6%",
+    color: "" + colors.medium,
+    transition: "top .2s"
+  }
+};
+
 var InputTextComponent = function InputTextComponent() {
-  return /*#__PURE__*/React.createElement("input", {
-    type: "text"
-  });
+  return /*#__PURE__*/React.createElement("div", {
+    style: style.wrapper
+  }, /*#__PURE__*/React.createElement("label", null, /*#__PURE__*/React.createElement("input", {
+    style: style.textInput
+  }), /*#__PURE__*/React.createElement("span", {
+    style: style.subText
+  }, "Normal")));
 };
 
 function _extends() {
@@ -23,7 +57,7 @@ function _extends() {
   return _extends.apply(this, arguments);
 }
 
-var style = {
+var style$1 = {
   btn: {
     display: "flex",
     flexDirection: "row",
@@ -42,34 +76,25 @@ var style = {
 };
 
 var ButtonComponent = function ButtonComponent(props) {
-  var button = _extends({}, style.btn, style[props.color]);
+  var button = _extends({}, style$1.btn, style$1[props.color]);
   return /*#__PURE__*/React.createElement("button", {
     style: button
   }, props.text);
 };
 
-var styles = {"container":"_1iqhl","checkmark":"_vRuMv"};
-
 var CheckBoxComponent = function CheckBoxComponent() {
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
-    className: styles.container
-  }, "One", /*#__PURE__*/React.createElement("input", {
-    type: "checkbox"
-  }), /*#__PURE__*/React.createElement("span", {
-    className: styles.checkmark
-  })));
+  return /*#__PURE__*/React.createElement("div", null);
 };
 
-var RadioButtonComponent = function RadioButtonComponent() {
+var RadioButtonComponent = function RadioButtonComponent(props) {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("input", {
     type: "radio",
-    id: "huey",
-    name: "drone",
-    value: "huey",
-    checked: true
+    id: props.text,
+    name: props.text,
+    value: props.text
   }), /*#__PURE__*/React.createElement("label", {
     htmlFor: "huey"
-  }, "Huey"));
+  }, props.text));
 };
 
 var SelectComponent = function SelectComponent() {

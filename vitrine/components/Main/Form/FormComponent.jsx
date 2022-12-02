@@ -1,16 +1,15 @@
 import React from "react"
 import style from "./style.js"
 import {InputTextComponent, RadioButtonComponent, SelectComponent, CheckBoxComponent, ButtonComponent} from "my-lib-ui";
-
 const FormComponent = () => {
     return (
         <div style={style.container}>
             <div style={style.radioArea}>
                 <div style={style.company}>
-                    <RadioButtonComponent />
+                    <RadioButtonComponent text="une entreprise" />
                 </div>
                 <div style={style.private}>
-                    <RadioButtonComponent />
+                    <RadioButtonComponent text="un particulier" />
                 </div>
             </div>
             <div style= {style.lastName}>
