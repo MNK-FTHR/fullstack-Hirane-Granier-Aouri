@@ -8,6 +8,7 @@ const style = {
         gap: "8px",
         width: "150px",
         right: "9px",
+        border: "none"
     },
     danger: {
         background: "#C00000",

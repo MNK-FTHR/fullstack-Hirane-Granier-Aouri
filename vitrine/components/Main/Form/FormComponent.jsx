@@ -30,9 +30,11 @@ const FormComponent = () => {
             </div>
             <div style= {style.driversLicense}>
                 <CheckBoxComponent />
+                {/* <input type="checkbox" id="driversLicense" />
+                <label for="driversLicense">J’atteste que je possède un permis de conduire valide.</label> */}
             </div>
             <div style= {style.subscribe}>
-                <ButtonComponent />
+                <ButtonComponent color="danger" text="Demander mon inscription" />
             </div>
         </div>
     );

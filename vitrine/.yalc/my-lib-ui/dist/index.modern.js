@@ -1,7 +1,6 @@
 import React from 'react';
 
 var InputTextComponent = function InputTextComponent() {
-  console.log("HERE");
   return /*#__PURE__*/React.createElement("input", {
     type: "text"
   });
@@ -30,9 +29,9 @@ var style = {
     alignItems: "center",
     padding: "12px 16px",
     gap: "8px",
-    position: "absolute",
     width: "150px",
-    right: "9px"
+    right: "9px",
+    border: "none"
   },
   danger: {
     background: "#C00000",
@@ -47,12 +46,28 @@ var ButtonComponent = function ButtonComponent(props) {
   }, props.text);
 };
 
+var styles = {"container":"_1iqhl","checkmark":"_vRuMv"};
+
 var CheckBoxComponent = function CheckBoxComponent() {
-  return /*#__PURE__*/React.createElement("div", null, "checkbox");
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
+    className: styles.container
+  }, "One", /*#__PURE__*/React.createElement("input", {
+    type: "checkbox"
+  }), /*#__PURE__*/React.createElement("span", {
+    className: styles.checkmark
+  })));
 };
 
 var RadioButtonComponent = function RadioButtonComponent() {
-  return /*#__PURE__*/React.createElement("div", null, "radiobutton");
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("input", {
+    type: "radio",
+    id: "huey",
+    name: "drone",
+    value: "huey",
+    checked: true
+  }), /*#__PURE__*/React.createElement("label", {
+    htmlFor: "huey"
+  }, "Huey"));
 };
 
 var SelectComponent = function SelectComponent() {

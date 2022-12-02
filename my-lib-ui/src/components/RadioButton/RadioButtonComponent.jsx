@@ -2,7 +2,10 @@ import React from "react";
 
 const RadioButtonComponent = () => {
   return (
-    <div>radiobutton</div>
+    <div>
+      <input type="radio" id="huey" name="drone" value="huey" checked />
+      <label htmlFor="huey">Huey</label>
+    </div>
   );
 };
 

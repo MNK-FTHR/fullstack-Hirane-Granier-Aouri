@@ -1,16 +1,14 @@
-._1iqhl {
+.container {
     display: block;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
   }
   
-  ._1iqhl input {
+  .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -18,7 +16,7 @@
     width: 0;
   }
   
-  ._vRuMv {
+  .checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,30 +25,32 @@
     background-color: #eee;
   }
   
-  ._1iqhl:hover input ~ ._vRuMv {
+  .container:hover input ~ .checkmark {
     background-color: #ccc;
   }
   
-  ._1iqhl input:checked ~ ._vRuMv {
+  .container input:checked ~ .checkmark {
     background-color: #2196F3;
   }
   
-  ._vRuMv:after {
+  .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
   
-  ._1iqhl input:checked ~ ._vRuMv:after {
+  .container input:checked ~ .checkmark:after {
     display: block;
   }
   
-  ._1iqhl ._vRuMv:after {
+  .container .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
     height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }

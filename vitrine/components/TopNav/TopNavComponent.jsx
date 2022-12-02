@@ -1,7 +1,6 @@
 import React from "react"
 import {ButtonComponent} from "my-lib-ui";
 import style from "./style.js"
-import logo from "./logo.svg"
 const TopNavComponent = () => {
     return (
         <div style={style.container}>

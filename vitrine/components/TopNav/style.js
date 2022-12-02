@@ -22,6 +22,7 @@ const style = {
     },
     connexion: {
         margin: "10px 15px",
+        float: "right"
     }
 }
 
