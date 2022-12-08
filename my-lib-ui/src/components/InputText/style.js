@@ -9,7 +9,7 @@ const style = {
     },
     textInput: {
         border: "none",
-        borderBottom: `0.125rem solid ${colors.medium}`,
+        borderBottom: `0.125rem solid black`,
         width: "100%",
         height: "2rem",
         fontSize: "1.0625rem",
@@ -17,11 +17,16 @@ const style = {
         lineHeight: "147.6%",
         paddingTop: "0.825rem",
         paddingBottom: "0.5rem",
+        "&:hover": {
+            background: "rgba(73, 133, 224, 0.12)",
+            borderColor: "#121212",
+        },
+        
     },
 
     subText: {
         position: "absolute",
-        top: "0.9375rem",
+        top: "0.500rem",
         left: "0.875rem",
         lineHeight: "147.6%",
         color: `${colors.medium}`,

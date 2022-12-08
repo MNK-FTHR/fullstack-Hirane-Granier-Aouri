@@ -13,18 +13,22 @@ var style = {
   },
   textInput: {
     border: "none",
-    borderBottom: "0.125rem solid " + colors.medium,
+    borderBottom: "0.125rem solid black",
     width: "100%",
     height: "2rem",
     fontSize: "1.0625rem",
     paddingLeft: "0.875rem",
     lineHeight: "147.6%",
     paddingTop: "0.825rem",
-    paddingBottom: "0.5rem"
+    paddingBottom: "0.5rem",
+    "&:hover": {
+      background: "rgba(73, 133, 224, 0.12)",
+      borderColor: "#121212"
+    }
   },
   subText: {
     position: "absolute",
-    top: "0.9375rem",
+    top: "0.500rem",
     left: "0.875rem",
     lineHeight: "147.6%",
     color: "" + colors.medium,
@@ -36,7 +40,9 @@ var InputTextComponent = function InputTextComponent() {
   return /*#__PURE__*/React.createElement("div", {
     style: style.wrapper
   }, /*#__PURE__*/React.createElement("label", null, /*#__PURE__*/React.createElement("input", {
-    style: style.textInput
+    style: style.textInput,
+    onMouseEnter: handleMouseEnter,
+    onMouseLeave: handleMouseLeave
   }), /*#__PURE__*/React.createElement("span", {
     style: style.subText
   }, "Normal")));
