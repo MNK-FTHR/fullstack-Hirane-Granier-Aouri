@@ -9,27 +9,23 @@ const style = {
     },
     textInput: {
         border: "none",
+        color: "red",
         borderBottom: `0.125rem solid black`,
+        backgroundColor: "#F9F9F9",
         width: "100%",
         height: "2rem",
-        fontSize: "1.0625rem",
-        paddingLeft: "0.875rem",
+        fontSize: "1rem",
         lineHeight: "147.6%",
-        paddingTop: "0.825rem",
-        paddingBottom: "0.5rem",
-        "&:hover": {
-            background: "rgba(73, 133, 224, 0.12)",
-            borderColor: "#121212",
-        },
-        
+        padding: "18px 12px 18px 16px",
+        textDecoration: "none",
     },
 
     subText: {
         position: "absolute",
-        top: "0.500rem",
+        top: "-1rem",
         left: "0.875rem",
         lineHeight: "147.6%",
-        color: `${colors.medium}`,
+        color: "rgba(19, 19, 21, 0.6)",
         transition: "top .2s",
     }
 }

@@ -13,22 +13,22 @@ const FormComponent = () => {
                 </div>
             </div>
             <div style= {style.lastName}>
-                <InputTextComponent />
+                <InputTextComponent fieldName="Nom" />
             </div>
             <div style= {style.firstName}>
-                <InputTextComponent />
+                <InputTextComponent fieldName="Prénom"/>
             </div>
             <div style= {style.eMail}>
-                <InputTextComponent />
+                <InputTextComponent fieldName="E-mail"/>
             </div>
             <div style= {style.phone}>
-                <InputTextComponent />
+                <InputTextComponent fieldName="Numéro de téléphone"/>
             </div>
             <div style= {style.nationality}>
-                <SelectComponent />
+                <SelectComponent nationalities={["Dutch", "English", "Français",]} />
             </div>
             <div style= {style.driversLicense}>
-                <CheckBoxComponent />
+                <CheckBoxComponent text="J’atteste que je possède un permis de conduire valide." />
                 {/* <input type="checkbox" id="driversLicense" />
                 <label for="driversLicense">J’atteste que je possède un permis de conduire valide.</label> */}
             </div>

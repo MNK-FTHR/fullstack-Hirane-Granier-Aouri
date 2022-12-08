@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./style.js"
-const InputTextComponent = () => {
+const InputTextComponent = (props) => {
 
   return (
     <div style={style.wrapper}>
 		<label>
 			<input
-			 	style={style.textInput}
+			 	style={style.textInput} 
 			 />
-			<span style={style.subText}>Normal</span>
+			<span style={style.subText}>{props.fieldName}</span>
 		</label>
 	</div>
   );

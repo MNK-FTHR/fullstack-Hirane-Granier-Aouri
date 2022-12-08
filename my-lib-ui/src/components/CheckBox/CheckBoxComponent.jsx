@@ -1,13 +1,13 @@
 import React from "react";
-import styles from './style.module.css';
+import style from './style.css';
 
-const CheckBoxComponent = () => {
+const CheckBoxComponent = (props) => {
   return (
     <div>
-      {/* <label className={styles.container}>One  
+      <label>  
         <input type="checkbox" />
-         <span className={styles.checkmark}></span>
-      </label> */}
+        <span>{props.text}</span>
+      </label>
     </div>
   );
 };
