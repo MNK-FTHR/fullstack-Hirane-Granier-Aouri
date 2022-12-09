@@ -12,27 +12,27 @@ const FormComponent = () => {
                     <RadioButtonComponent text="un particulier" />
                 </div>
             </div>
-            <div style= {style.lastName}>
+            <div style={style.lastName}>
                 <InputTextComponent fieldName="Nom" />
             </div>
-            <div style= {style.firstName}>
+            <div style={style.firstName}>
                 <InputTextComponent fieldName="Prénom"/>
             </div>
-            <div style= {style.eMail}>
+            <div style={style.eMail}>
                 <InputTextComponent fieldName="E-mail"/>
             </div>
-            <div style= {style.phone}>
+            <div style={style.phone}>
                 <InputTextComponent fieldName="Numéro de téléphone"/>
             </div>
-            <div style= {style.nationality}>
-                <SelectComponent nationalities={["Dutch", "English", "Français",]} />
+            <div style={style.nationality}>
+                <SelectComponent nationalities={[{label:"Dutch", value: "DE"}, {label:"United Kingdom", value: "GB"}, {label:"Français", value:"FR"},]} />
             </div>
-            <div style= {style.driversLicense}>
+            <div style={style.driversLicense}>
                 <CheckBoxComponent text="J’atteste que je possède un permis de conduire valide." />
                 {/* <input type="checkbox" id="driversLicense" />
                 <label for="driversLicense">J’atteste que je possède un permis de conduire valide.</label> */}
             </div>
-            <div style= {style.subscribe}>
+            <div style={style.subscribe}>
                 <ButtonComponent color="danger" text="Demander mon inscription" />
             </div>
         </div>

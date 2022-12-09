@@ -78,19 +78,9 @@ var ButtonComponent = function ButtonComponent(props) {
   }, props.text);
 };
 
-var style$2 = {
-  chckbx: {
-    width: "17px",
-    height: "17px",
-    outline: "2px solid #000000",
-    borderRadius: "1px"
-  }
-};
-
 var CheckBoxComponent = function CheckBoxComponent(props) {
   return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", null, /*#__PURE__*/React.createElement("input", {
-    type: "checkbox",
-    style: style$2.chckbx
+    type: "checkbox"
   }), /*#__PURE__*/React.createElement("span", null, props.text)));
 };
 
@@ -105,8 +95,52 @@ var RadioButtonComponent = function RadioButtonComponent(props) {
   }, props.text));
 };
 
-var SelectComponent = function SelectComponent() {
-  return /*#__PURE__*/React.createElement("div", null, "select");
+var style$2 = {
+  select: {
+    border: "none",
+    borderBottom: "0.125rem solid black",
+    backgroundColor: "#F9F9F9",
+    width: "100%",
+    fontSize: "1rem",
+    padding: "18px 12px 18px 16px",
+    color: "rgba(19, 19, 21, 0.6)"
+  },
+  subText: {
+    top: "0.875rem",
+    left: "0.875rem",
+    lineHeight: "147.6%",
+    zIndex: "0",
+    color: "rgba(19, 19, 21, 0.6)",
+    transition: "top .2s"
+  }
+};
+
+var SelectComponent = function SelectComponent(props) {
+  var customSelectedOption = "";
+  var parsedCustomSelectedOption = props.nationalities.filter(function (nationality) {
+    return nationality.value === customSelectedOption;
+  });
+  var handleChange = function handleChange(event) {
+    var val = event.target.value;
+    customSelectedOption = val;
+  };
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("label", {
+    style: style$2.subText
+  }, "Nationalit\xE9"), /*#__PURE__*/React.createElement("select", {
+    style: style$2.select,
+    onChange: function onChange(e) {
+      return handleChange(e);
+    },
+    value: parsedCustomSelectedOption.label
+  }, /*#__PURE__*/React.createElement("option", {
+    defaultValue: true,
+    disabled: true
+  }, "S\xE9lectinnez une valeur"), props.nationalities.map(function (nationality) {
+    return /*#__PURE__*/React.createElement("option", {
+      value: nationality.value,
+      key: nationality.value
+    }, nationality.label);
+  })));
 };
 
 export { ButtonComponent, CheckBoxComponent, InputTextComponent, RadioButtonComponent, SelectComponent };
