@@ -18,6 +18,7 @@ const style = {
         lineHeight: "147.6%",
         padding: "18px 12px 18px 16px",
         textDecoration: "none",
+        outline: "none",
     },
 
     subText: {

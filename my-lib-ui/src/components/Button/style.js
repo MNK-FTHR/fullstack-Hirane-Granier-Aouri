@@ -8,7 +8,8 @@ const style = {
         gap: "8px",
         width: "150px",
         right: "9px",
-        border: "none"
+        border: "none",
+        cursor: "pointer"
     },
     danger: {
         background: "#C00000",

@@ -16,7 +16,8 @@ var style = {
     fontSize: "1rem",
     lineHeight: "147.6%",
     padding: "18px 12px 18px 16px",
-    textDecoration: "none"
+    textDecoration: "none",
+    outline: "none"
   },
   subText: {
     position: "absolute",
@@ -63,7 +64,8 @@ var style$1 = {
     gap: "8px",
     width: "150px",
     right: "9px",
-    border: "none"
+    border: "none",
+    cursor: "pointer"
   },
   danger: {
     background: "#C00000",
@@ -73,6 +75,7 @@ var style$1 = {
 
 var ButtonComponent = function ButtonComponent(props) {
   var button = _extends({}, style$1.btn, style$1[props.color]);
+  props.maxWidth ? button.width = "100%" : "";
   return /*#__PURE__*/React.createElement("button", {
     style: button
   }, props.text);
@@ -106,7 +109,7 @@ var style$2 = {
     color: "rgba(19, 19, 21, 0.6)"
   },
   subText: {
-    top: "0.875rem",
+    top: "0.5rem",
     left: "0.875rem",
     lineHeight: "147.6%",
     zIndex: "0",

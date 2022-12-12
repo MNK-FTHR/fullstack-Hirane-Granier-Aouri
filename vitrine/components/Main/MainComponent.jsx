@@ -7,13 +7,13 @@ const MainComponent = () => {
             <div style={style.bgcar}>
                 <div style={style.desc}>
                     <p style={style.description}>
-                        <span style={{color: "red"}}>▷</span> Depuis 2008, RIDE,
+                        <span style={{color: "#C00000"}}>▷</span> Depuis 2008, RIDE,
                          agence de location de voitures 
                          de luxe propose ses services partout en France <br />
                          (Paris, Monaco, Nice, Cannes, Saint-Tropez, Courchevel, Saint-Moritz...). <br /> 
                          Notre expérience est à votre service pour répondre à toutes vos demandes
                     </p>
-                    <hr width="95%" color="red" size="1" />
+                    <hr width="95%" color="#C00000" size="1" />
                 </div>
             </div>
             <div style={style.main}>

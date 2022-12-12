@@ -33,7 +33,7 @@ const FormComponent = () => {
                 <label for="driversLicense">J’atteste que je possède un permis de conduire valide.</label> */}
             </div>
             <div style={style.subscribe}>
-                <ButtonComponent color="danger" text="Demander mon inscription" />
+                <ButtonComponent maxWidth={true} color="danger" text="Demander mon inscription" />
             </div>
         </div>
     );
