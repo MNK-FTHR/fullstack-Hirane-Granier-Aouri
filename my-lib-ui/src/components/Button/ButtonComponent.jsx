@@ -8,7 +8,7 @@ const ButtonComponent = (props) => {
 
   props.maxWidth ? button.width = "100%" : "";
   return (
-    <button style={button}>{props.text}</button>
+    <button style={button} onClick={event => props.handleSubmit(event, [])}>{props.text}</button>
   );
 };
 

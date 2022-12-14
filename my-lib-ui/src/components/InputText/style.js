@@ -3,9 +3,8 @@ const colors = {
 }
 const style = {
     wrapper: {
-        marginBottom: "1.5rem",
         position: "relative",
-        width: "20.4375rem",
+        width: "100%",
     },
     textInput: {
         border: "none",

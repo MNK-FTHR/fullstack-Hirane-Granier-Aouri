@@ -1,7 +1,12 @@
 import React from "react"
 import style from "./style.js"
 import {InputTextComponent, RadioButtonComponent, SelectComponent, CheckBoxComponent, ButtonComponent} from "my-lib-ui";
-const FormComponent = () => {
+const FormComponent = (props) => {
+    const handleSubmit = (event, data) =>{
+        data.from = 'subForm';
+        data.data = {};
+        props.handleSubmit(event, data)
+    }
     return (
         <div style={style.container}>
             <div style={style.radioArea}>
@@ -29,11 +34,9 @@ const FormComponent = () => {
             </div>
             <div style={style.driversLicense}>
                 <CheckBoxComponent text="J’atteste que je possède un permis de conduire valide." />
-                {/* <input type="checkbox" id="driversLicense" />
-                <label for="driversLicense">J’atteste que je possède un permis de conduire valide.</label> */}
             </div>
             <div style={style.subscribe}>
-                <ButtonComponent maxWidth={true} color="danger" text="Demander mon inscription" />
+                <ButtonComponent maxWidth={true} color="danger" text="Demander mon inscription" handleSubmit={handleSubmit} />
             </div>
         </div>
     );

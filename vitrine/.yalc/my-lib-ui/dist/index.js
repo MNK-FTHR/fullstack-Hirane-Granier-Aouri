@@ -5,9 +5,8 @@ var React__default = _interopDefault(React);
 
 var style = {
   wrapper: {
-    marginBottom: "1.5rem",
     position: "relative",
-    width: "20.4375rem"
+    width: "100%"
   },
   textInput: {
     border: "none",
@@ -80,7 +79,10 @@ var ButtonComponent = function ButtonComponent(props) {
   var button = _extends({}, style$1.btn, style$1[props.color]);
   props.maxWidth ? button.width = "100%" : "";
   return /*#__PURE__*/React__default.createElement("button", {
-    style: button
+    style: button,
+    onClick: function onClick(event) {
+      return props.handleSubmit(event, []);
+    }
   }, props.text);
 };
 

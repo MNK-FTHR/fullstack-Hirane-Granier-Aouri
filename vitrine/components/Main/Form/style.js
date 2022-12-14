@@ -3,7 +3,7 @@ const style = {
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         gridTemplateRows: "1fr 1fr 1fr 1fr 1fr 1fr",
-        gap: "0px 0px",
+        gap: "15px 15px",
         gridTemplateAreas: `
         "radioArea ."
         "lastName firstName"

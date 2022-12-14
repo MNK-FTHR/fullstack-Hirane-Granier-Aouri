@@ -1,7 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 import style from "./style.js"
 import FormComponent from "./Form/FormComponent";
+import AfterSubscription from "./AfterSubscription/AfterSubscription.jsx";
 const MainComponent = () => {
+    const [form, setForm] = useState({from: "", data: {}})
+    const handleSubmit = (event, data) => {
+        console.log(data);
+        setForm({from: data.from, data: data.data})
+        console.log(form);
+      };
     return (
         <div style={style.container}>
             <div style={style.bgcar}>
@@ -19,8 +26,14 @@ const MainComponent = () => {
             <div style={style.main}>
                 <div style={style.mainForm}>
                     <h2 style={{color: "#C00000", fontWeight: "500"}}>INSCRIPTION</h2>
-                    <p>Je suis :</p>
-                    <FormComponent />
+                    {form.from == "" ? (
+                        <>
+                            <p>Je suis :</p>
+                            <FormComponent handleSubmit={handleSubmit} />
+                        </>
+                    ) : (
+                        <AfterSubscription />
+                    )}
                 </div>
             </div>
         </div>
