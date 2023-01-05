@@ -1,15 +1,10 @@
 import express from "express";
 import axios from "axios";
-import bodyParser from "body-parser";
 
 const app = express();
 const port = 8000;
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
-
-// parse application/json
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.get("/api", (_, res) => {
   res.send("Hello API");
