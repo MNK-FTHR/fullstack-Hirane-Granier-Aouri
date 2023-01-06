@@ -9,6 +9,15 @@ const MainComponent = () => {
         setForm({from: data.from, data: data.data})
         console.log(form);
       };
+
+      fetch('https://jsonplaceholder.typicode.com/posts/1')
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+
+      fetch('http://localhost:8000/api/hello')
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+      
     return (
         <div style={style.container}>
             <div style={style.bgcar}>
