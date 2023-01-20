@@ -1,4 +1,4 @@
-from flask import Flask,jsonify,redirect,request
+from flask import Flask,jsonify,redirect,request,make_response
 from car import db,CarModel
 import json
 
@@ -6,7 +6,7 @@ app =Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
- 
+readableData = []
 @app.before_first_request
 def create_table():
     db.create_all()
@@ -21,12 +21,14 @@ def create():
     car = CarModel(car_id=car_id, name=name, price=price, image = image)
     db.session.add(car)
     db.session.commit()
-    return jsonify(car)
+    return make_response(jsonify({'car_id': car_id, 'name': name, 'price': price, 'image': image}), 200)
 
 @app.route('/car')
 def RetrieveDataList():
     cars = CarModel.query.all()
-    return jsonify(cars = cars)
+    for car in cars:
+        readableData.append({'car_id': car.car_id, 'name': car.name, 'price': car.price, 'image': car.image})
+    return make_response(jsonify({'cars': readableData}), 200)
 
 @app.route('/car/<int:id>')
 def RetrieveSingleCar(id):
