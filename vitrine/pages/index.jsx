@@ -4,22 +4,29 @@ import TopNavComponent from "../components/TopNav/TopNavComponent"
 import MainComponent from "../components/Main/MainComponent"
 import ConnectionComponent from "../components/Connection/ConnectionComponent";
 import { useState } from "react";
+import AdminComponent from "../components/Admin/AdminComponent";
 const Home = () => {
     let [conAdmin, setConAdmin] = useState(false);
     const handleSubmit = (event, data) => {
-        console.log(data);
         setConAdmin(true);
     };
     const goBack = () =>{
-        console.log("hOOOOO");
         setConAdmin(false);
     }
+    let admin = true
     return (
         <div>
             <HeadComponent />
             <TopNavComponent handleSubmit={handleSubmit} />
             {conAdmin === false ? <MainComponent /> : (
-                <ConnectionComponent goBack={goBack}/>
+                <div>
+                    {
+                        admin ? 
+                            <AdminComponent/>
+                        :
+                            <ConnectionComponent goBack={goBack}/>
+                    }
+                </div>
             )}
             <FooterComponent />
         </div>

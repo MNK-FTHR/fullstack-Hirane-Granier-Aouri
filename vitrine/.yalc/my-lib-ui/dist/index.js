@@ -3,12 +3,35 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var React = require('react');
 var React__default = _interopDefault(React);
 
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+
 var style = {
   wrapper: {
     position: "relative",
     width: "100%"
   },
+  inputContainer: {
+    display: "grid",
+    gridTemplateColumns: "1fr 0.1fr",
+    gridTemplateRows: "1fr",
+    gap: "0px 0px",
+    gridTemplateAreas: "\n            \"inp eye\"\n        "
+  },
   textInput: {
+    gridArea: "inp",
     border: "none",
     color: "red",
     borderBottom: "0.125rem solid black",
@@ -28,33 +51,76 @@ var style = {
     lineHeight: "147.6%",
     color: "rgba(19, 19, 21, 0.6)",
     transition: "top .2s"
+  },
+  hidePW1: {
+    padding: "5px",
+    position: "relative",
+    zIndex: 1,
+    cursor: "pointer",
+    gridArea: "eye",
+    backgroundColor: "#F9F9F9",
+    width: "100%",
+    height: "100%",
+    borderBottom: "0.125rem solid black"
+  },
+  hidePW2: {
+    padding: "5px",
+    position: "absolute",
+    zIndex: 2,
+    marginTop: "-37px",
+    cursor: "pointer",
+    gridArea: "eye"
+  },
+  revealPW: {
+    padding: "5px",
+    cursor: "pointer",
+    gridArea: "eye",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#F9F9F9",
+    borderBottom: "0.125rem solid black"
   }
 };
 
 var InputTextComponent = function InputTextComponent(props) {
+  var _useState = React.useState(true),
+    hide = _useState[0],
+    setHide = _useState[1];
+  console.log(props.type == "password" && hide, props);
   return /*#__PURE__*/React__default.createElement("div", {
     style: style.wrapper
-  }, /*#__PURE__*/React__default.createElement("label", null, /*#__PURE__*/React__default.createElement("input", {
-    style: style.textInput
-  }), /*#__PURE__*/React__default.createElement("span", {
+  }, /*#__PURE__*/React__default.createElement("label", null, /*#__PURE__*/React__default.createElement("div", {
+    style: props.type == "password" ? style.inputContainer : {
+      width: "90%"
+    }
+  }, /*#__PURE__*/React__default.createElement("input", {
+    style: _extends({}, style.textInput, props.type != "password" ? {
+      width: "110%"
+    } : null),
+    type: props.type == "password" ? !hide ? "text" : props.type : "text"
+  }), props.type == "password" && (hide ? /*#__PURE__*/React__default.createElement("div", {
+    style: style.revealPW
+  }, /*#__PURE__*/React__default.createElement("img", {
+    onClick: function onClick() {
+      setHide(false);
+    },
+    src: "/revealPW.png"
+  })) : /*#__PURE__*/React__default.createElement("div", {
+    onClick: function onClick() {
+      setHide(true);
+    }
+  }, /*#__PURE__*/React__default.createElement("div", {
+    style: style.hidePW1
+  }, /*#__PURE__*/React__default.createElement("img", {
+    src: "/hidePW1.png"
+  })), /*#__PURE__*/React__default.createElement("div", {
+    style: style.hidePW2
+  }, /*#__PURE__*/React__default.createElement("img", {
+    src: "/hidePW2.png"
+  }))))), /*#__PURE__*/React__default.createElement("span", {
     style: style.subText
   }, props.fieldName)));
 };
-
-function _extends() {
-  _extends = Object.assign ? Object.assign.bind() : function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  return _extends.apply(this, arguments);
-}
 
 var style$1 = {
   btn: {
