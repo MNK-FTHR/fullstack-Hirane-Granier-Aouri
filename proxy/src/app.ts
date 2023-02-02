@@ -12,7 +12,7 @@ app.get("/api", (_, res) => {
 
 app.get("/api/.user", (_, res) => {
   axios.get("http://nginx/api/hello").then((onfulfilled) => {
-    res.send(onfulfilled.data);
+    res.json(onfulfilled.data);
   });
 });
 
@@ -38,6 +38,10 @@ app.get("/api/checkrole", (req, res) => {
     res.send(onfulfilled.data);
   });
 });
+
+// axios.get("http://nginx/api/hello").then((onfulfilled) => {
+//  console.log(onfulfilled.data);
+// });
 
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);

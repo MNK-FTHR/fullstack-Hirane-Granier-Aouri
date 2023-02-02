@@ -27,6 +27,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
+    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    private ?futurUser $futurUser = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -100,5 +103,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getHello()
     {
         // TODO: Implement getHello() method.
+    }
+
+    public function getFuturUser(): ?futurUser
+    {
+        return $this->futurUser;
+    }
+
+    public function setFuturUser(?futurUser $futurUser): self
+    {
+        $this->futurUser = $futurUser;
+
+        return $this;
     }
 }
