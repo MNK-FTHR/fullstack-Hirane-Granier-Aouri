@@ -2,30 +2,44 @@ const style = {
     spaceAround: {
         display: "grid",
         gridTemplateColumns: "1fr 1fr 1fr",
-        gridTemplateRows: "1fr 1fr 1fr",
+        gridTemplateRows: "0.1fr 1fr 0.1fr",
         gap: "0px 0px", 
         justifyContent: "center",
+        backgroundColor: "lightgrey", 
         alignItems: "center",
         gridTemplateAreas: `
-            ". . ."
+            ". whiteSpace ."
             ". container ."
             ". . ."`
+    },
+    whiteSpace:{
+        gridArea: "whiteSpace"
     },
     container: {
         display: "grid",
         gridTemplateColumns: "1fr",
-        gridTemplateRows: "1fr 1fr",
-        gap: "16px 0px",
+        gridTemplateRows: "0.25fr 1fr",
+        gap: "0px 0px",
+        gridArea: "container",
         gridTemplateAreas:`
-            "goBack"
-            "form"`
+        "goBack"
+        "form"`
     },
-    goBack: {gridArea: "goBack"},
+    goBack: {
+        paddingTop: "10%",
+        gridArea: "goBack",
+        fontWeight: "bold",
+    },
+    goBackHover: {
+        textDecoration: "underline",
+    },
     form: {
+        padding:"12px",
         display: "grid",
         gridTemplateColumns: "1fr",
         gridTemplateRows: "0.8fr 1fr 1fr 1.2fr",
-        gap: "24px 0px",
+        backgroundColor: "white", 
+        gap: "0px 0px",
         gridTemplateAreas: `
             "connexion"
             "id"
