@@ -22,12 +22,13 @@ class UserApiController extends AbstractController
     }
 
 
-    #[Route('/hello', name: 'hello', methods: "POST")]
+    #[Route('/hello', name: 'hello', methods: "GET")]
     public function checkhello(Request $request)
     {
         $user = $this->getUser();
         $data = json_decode($request->getContent(), true);
         $hello = $data["hello"];
+        
         if (!$user) {
             return $this->json([
                 'message' => 'role missing',
@@ -37,7 +38,7 @@ class UserApiController extends AbstractController
 
     }
 
-    #[Route('/.user/login', name: 'login', methods: "POST")]
+    #[Route('/.user/login', name: 'login', methods: "GET")]
     public function checklogin(Request $request)
     {
         $user = $this->getUser();
@@ -52,7 +53,7 @@ class UserApiController extends AbstractController
 
     }
 
-    #[Route('/.user/user', name: 'user', methods: "POST")]
+    #[Route('/.user/user', name: 'user', methods: "GET")]
     public function checkuser(Request $request)
     {
         $user = $this->getUser();
@@ -67,7 +68,7 @@ class UserApiController extends AbstractController
     }
 
 
-    #[Route('/.user/admin', name: 'admin', methods: "POST")]
+    #[Route('/.user/admin', name: 'admin', methods: "GET")]
     public function checkadmin(Request $request)
     {
         $user = $this->getUser();
@@ -82,17 +83,14 @@ class UserApiController extends AbstractController
     }
 
 
-    #[Route('/check_role', name: 'app_user_api_check_role', methods: "POST")]
+    #[Route('/checkrole', name: 'app_user_api_check_role', methods: "POST")]
     public function checkRole(Request $request)
     {
         $user = $this->getUser();
         $data = json_decode($request->getContent(), true);
         $role = $data["role"];
-        if (!$role) {
-            return $this->json([
-                'message' => 'role missing',
-            ], Response::HTTP_BAD_REQUEST);
-        }
+        if (in_array('ROLE_USER', $this->getUser()->getRoles(), true));
+            else (in_array('ROLE_ADMIN', $this->getUser()->getRoles(), true));
         return $this->json(in_array($role, $user->getRoles()));
     }
 }

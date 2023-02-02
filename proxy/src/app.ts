@@ -16,6 +16,29 @@ app.get("/api/.user", (_, res) => {
   });
 });
 
+app.post("/api/.user/login", (req, res) => {
+  axios.post("http://nginx/api/login_check", {
+    username: req.body.username,
+    password: req.body.password
+  }).then((onfulfilled) => {
+    res.send(onfulfilled.data);
+  });
+});
+
+app.get("/api/admin", (_, res) => {
+  axios.get("http://nginx/api/admin").then((onfulfilled) => {
+    res.send(onfulfilled.data);
+  });
+});
+
+app.get("/api/checkrole", (req, res) => {
+  axios.post("http://nginx/api/checkrole", {
+    role: req.body.role
+  }).then((onfulfilled) => {
+    res.send(onfulfilled.data);
+  });
+});
+
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);
 });

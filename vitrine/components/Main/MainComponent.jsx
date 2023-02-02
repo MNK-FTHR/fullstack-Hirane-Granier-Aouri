@@ -10,11 +10,21 @@ const MainComponent = () => {
         console.log(form);
       };
 
-      fetch('https://jsonplaceholder.typicode.com/posts/1')
+      fetch('https://jsonplaceholder.typicode.com/posts/1', {
+          mode: 'cors',
+          headers: {
+              'Access-Control-Allow-Origin':'*'
+          }
+      })
       .then((response) => response.json())
       .then((json) => console.log(json));
 
-      fetch('http://localhost:8000/api/hello')
+      fetch('http://localhost:8000/api/hello', {
+          mode: 'cors',
+          headers: {
+              'Access-Control-Allow-Origin':'*'
+          }
+      })
       .then((response) => response.json())
       .then((json) => console.log(json));
       
