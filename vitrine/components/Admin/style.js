@@ -43,7 +43,7 @@ const style = {
 
     },
     table: { 
-        marginTop: "-10%",
+        marginTop: "-7%",
         gridArea: "table",
         backgroundColor: "white"
     },
