@@ -15,7 +15,7 @@ app.get("/api/.user", (_, res) => {
     res.send(onfulfilled.data);
   });
 });
-
+//http://car:5000
 app.post("/api/.user/login", (req, res) => {
   axios.post("http://nginx/api/login_check", {
     username: req.body.username,
