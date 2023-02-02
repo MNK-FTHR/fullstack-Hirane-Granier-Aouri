@@ -4,7 +4,7 @@ import json
 
 app =Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://admin:admin@db:3306/lesson?serverVersion=8&charset=utf8mb4'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://admin:admin@db:8080/lesson?serverVersion=8&charset=utf8mb4'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 

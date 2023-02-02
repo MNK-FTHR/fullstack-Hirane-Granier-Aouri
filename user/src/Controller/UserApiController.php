@@ -38,22 +38,8 @@ class UserApiController extends AbstractController
 
     }
 
-    #[Route('/.user/login', name: 'login', methods: "GET")]
-    public function checklogin(Request $request)
-    {
-        $user = $this->getUser();
-        $data = json_decode($request->getContent(), true);
-        $login = $data["login"];
-        if (!$user) {
-            return $this->json([
-                'message' => 'role missing',
-            ], Response::HTTP_BAD_REQUEST);
-        }
-        return $this->json(in_array($login, $user->getLogin()));
 
-    }
-
-    #[Route('/.user/user', name: 'user', methods: "GET")]
+    #[Route('/user', name: 'user', methods: "GET")]
     public function checkuser(Request $request)
     {
         $user = $this->getUser();
@@ -68,7 +54,7 @@ class UserApiController extends AbstractController
     }
 
 
-    #[Route('/.user/admin', name: 'admin', methods: "GET")]
+    #[Route('/admin', name: 'admin', methods: "GET")]
     public function checkadmin(Request $request)
     {
         $user = $this->getUser();
