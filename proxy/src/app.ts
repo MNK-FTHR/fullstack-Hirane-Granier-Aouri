@@ -1,13 +1,21 @@
 import express from "express";
 import axios from "axios";
+import cors from 'cors';
 
 const app = express();
 const port = 8000;
 
+const allowedOrigins = ['http://localhost:3000'];
+
+const options: cors.CorsOptions = {
+  origin: allowedOrigins
+};
+app.use(cors(options));
+
 app.use(express.json());
 
 app.get("/api", (_, res) => {
-  res.send("Hello API");
+  res.json("Hello API");
 });
 
 app.get("/api/.user", (_, res) => {

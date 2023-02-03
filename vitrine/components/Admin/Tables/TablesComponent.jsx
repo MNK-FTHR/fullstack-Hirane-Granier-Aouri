@@ -24,6 +24,9 @@ const TablesComponent = (props) => {
 
     let datas
     if (tableContent === 'cars') {
+        fetch('http://localhost:8000/api')
+        .then((response) => response.json())
+        .then((json) => console.log(json));
         datas = [
             {
                 brand: "BMW",
