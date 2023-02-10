@@ -79,4 +79,15 @@ class UserApiController extends AbstractController
             else (in_array('ROLE_ADMIN', $this->getUser()->getRoles(), true));
         return $this->json(in_array($role, $user->getRoles()));
     }
+
+    #[Route('/register', name: "app_register", methods: 'POST')]
+    public function registerUser(Request $request): Response  {
+        $data = json_decode($request->getContent(), true);
+        $newUser = new FutureUser();
+        $newUser->setEmail($data["email"]);
+        $newUser->setIsValid(false);
+        $this->em->persist($newUser);
+        $this->em->flush();
+        return $this->json(["code" => 200, "message" => "New user added!", ]);
+    }
 }

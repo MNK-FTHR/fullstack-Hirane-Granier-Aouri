@@ -39,6 +39,14 @@ app.get("/api/checkrole", (req, res) => {
   });
 });
 
+app.get("/api/register",(req, res) => {
+  axios.post("http://nginx/api/checkrole", {
+    newUser: req.body.newUser
+  }).then((onfulfilled) => {
+    res.send(onfulfilled.data);
+  });
+});
+
 // axios.get("http://nginx/api/hello").then((onfulfilled) => {
 //  console.log(onfulfilled.data);
 // });
