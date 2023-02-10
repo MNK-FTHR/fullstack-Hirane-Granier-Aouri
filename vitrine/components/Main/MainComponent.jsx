@@ -10,9 +10,9 @@ const MainComponent = () => {
         console.log(form);
     };
 
-    fetch('http://localhost:8000/')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
+    // fetch('http://localhost:8000/')
+    // .then((response) => response.json())
+    // .then((json) => console.log(json));
 
     //   fetch('http://localhost:8000/api/hello')
     //   .then((response) => response.json())

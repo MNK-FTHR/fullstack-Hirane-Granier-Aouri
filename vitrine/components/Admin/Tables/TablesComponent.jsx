@@ -14,7 +14,7 @@ const TablesComponent = (props) => {
     }else{
         head =  
         <tr style={{height: "50px"}}>
-            <th style={style.brdrbttm}>Status</th>
+            <th style={style.brdrbttm}>validate</th>
             <th style={style.brdrbttm}>Nom/Prénom</th>
             <th style={style.brdrbttm}>Coordonées</th>
             <th style={style.brdrbttm}>Nationalités</th>
@@ -24,6 +24,9 @@ const TablesComponent = (props) => {
 
     let datas
     if (tableContent === 'cars') {
+        fetch('http://localhost:8000/api')
+        .then((response) => response.json())
+        .then((json) => console.log(json));
         datas = [
             {
                 brand: "BMW",
@@ -37,7 +40,7 @@ const TablesComponent = (props) => {
     }else{
         datas = [
             {
-                status: "waiting",
+                validate: "waiting",
                 firstName: "Dumont-Nachos",
                 lastName: "Bruce",
                 mail: "email@emailunpeulongpourtesterletableau.com",
@@ -45,7 +48,7 @@ const TablesComponent = (props) => {
                 nationality: "Français",
             },
             {
-                status: "validated",
+                validate: "validated",
                 firstName: "Coup-Déta",
                 lastName: "Hervé",
                 mail: "lebgdu67@laposte.net",
@@ -76,11 +79,11 @@ const TablesComponent = (props) => {
                             datas.map((data, i)=>{
                                 return(
                                     <tr key={i} style={{height: "50px"}}>
-                                        <td style={style.brdrbttm}> <b>{data.status == "waiting" ? "⚠️ En attente": "✅ Validé"}</b></td>
+                                        <td style={style.brdrbttm}> <b>{data.validate == "waiting" ? "⚠️ En attente": "✅ Validé"}</b></td>
                                         <td style={style.brdrbttm}>{data.firstName} {data.lastName}</td>
                                         <td style={style.brdrbttm}>{data.mail} <br /> {data.phone}</td>
                                         <td style={style.brdrbttm}>{data.nationality}</td>
-                                        <td style={style.brdrbttm}>{data.status == 'waiting' ? <ButtonComponent action={'validateUser'} dark={false} text="Vérifier"/> : <ButtonComponent action={'userUpdate'} dark={true} text="Editer"/>}</td>
+                                        <td style={style.brdrbttm}>{data.validate == 'waiting' ? <ButtonComponent action={'validateUser'} dark={false} text="Vérifier"/> : <ButtonComponent action={'userUpdate'} dark={true} text="Editer"/>}</td>
                                     </tr>
                                 )
                             })
