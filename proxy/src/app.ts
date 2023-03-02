@@ -5,12 +5,13 @@ import cors from 'cors';
 const app = express();
 const port = 8000;
 
-const allowedOrigins = ['http://localhost:3000'];
+// const allowedOrigins = ['http://localhost:3000'];
 
-const options: cors.CorsOptions = {
-  origin: allowedOrigins
-};
-app.use(cors(options));
+// const options: cors.CorsOptions = {
+//   origin: allowedOrigins
+// };
+// app.use(cors(options));
+app.use(cors());
 
 app.use(express.json());
 
