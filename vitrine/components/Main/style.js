@@ -2,7 +2,7 @@ const style = {
     container: {  
         display: "grid",
         gridTemplateColumns: "1fr",
-        gridTemplateRows: "0.5fr 1fr",
+        gridTemplateRows: "0.5fr 0.2fr",
         gap: "0px 0px",
         gridAutoFlow: "row",
         gridTemplateAreas:`

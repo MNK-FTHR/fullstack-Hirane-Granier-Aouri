@@ -5,9 +5,7 @@ import AfterSubscription from "./AfterSubscription/AfterSubscription.jsx";
 const MainComponent = () => {
     const [form, setForm] = useState({from: "", data: {}})
     const handleSubmit = (event, data) => {
-        console.log(data);
         setForm({from: data.from, data: data.data})
-        console.log(form);
     };
 
     // fetch('http://localhost:8000/')

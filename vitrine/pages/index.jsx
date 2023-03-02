@@ -7,13 +7,16 @@ import { useState } from "react";
 import AdminComponent from "../components/Admin/AdminComponent";
 const Home = () => {
     let [conAdmin, setConAdmin] = useState(false);
+    let [admin, setAdmin] = useState(false);
     const handleSubmit = (event, data) => {
         setConAdmin(true);
     };
     const goBack = () =>{
         setConAdmin(false);
     }
-    let admin = true
+    const connectIt = () =>{
+        setAdmin(true);
+    }
     return (
         <div>
             <HeadComponent />
@@ -24,7 +27,7 @@ const Home = () => {
                         admin ? 
                             <AdminComponent/>
                         :
-                            <ConnectionComponent goBack={goBack}/>
+                            <ConnectionComponent goBack={goBack} connect={connectIt}/>
                     }
                 </div>
             )}

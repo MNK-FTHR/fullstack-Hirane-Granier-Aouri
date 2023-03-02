@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import style from "./style.js"
 const InputTextComponent = (props) => {
 	const [hide, setHide] = useState(true);
-	console.log(props.type == "password" && hide, props);
 	return (
 		<div style={style.wrapper}>
 			<label>
